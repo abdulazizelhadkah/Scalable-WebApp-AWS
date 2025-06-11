@@ -43,7 +43,7 @@ The diagram below illustrates the end-to-end flow of the scalable web applicatio
 
 ## Default Architecture
 
-![Architecture Diagram (Default Architecture)](./default_architecture.png)
+![Architecture Diagram (Default Architecture)](Default_Diagram.png)
 
 ## Detailed Workflow
 *Step 1: User Requests*
