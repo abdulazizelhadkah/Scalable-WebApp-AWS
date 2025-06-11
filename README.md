@@ -87,7 +87,7 @@ SNS Notifications alert admins via email/SMS for critical events.
 AWS CloudFormation is a service that allows you to define and provision AWS infrastructure as code. Using templates written in YAML or JSON, you can automate the creation, update, and management of AWS resources in a safe and repeatable way. It helps simplify infrastructure deployment and ensures consistency across environments.
 
 **CloudFormation Template**  
-You can find the complete CloudFormation template for this architecture in the [`cloudformation.yaml`](./cloudformation.yaml) file.
+You can find the complete CloudFormation template for this architecture in the [`cloudformation.yaml`](./Cloudformation.yaml) file.
 
 
 
