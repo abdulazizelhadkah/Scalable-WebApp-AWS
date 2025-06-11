@@ -19,7 +19,7 @@ This project deploys a highly available, fault-tolerant, and auto-scaled web app
 | **User Access Layer**       | **Users connect to the application via the ALB's DNS endpoint**        | 
 | **Traffic Distribution Layer**         | **ALB routes requests across healthy EC2 instances in multiple Availability Zones** | 
 | **Compute Layer**   | **Auto-scaled EC2 instances running the web application**   | 
-| **Database Layer**      | **Amazon RDS with Multi-AZ deployment for database persistence**        | 
+| **Database Layer**      | **Amazon Aurora with Multi-AZ read replica for database persistence**        | 
 | **Management Layer**       | **CloudWatch monitoring and SNS alerts for operational visibility**  | 
 
 **Key components include:**
@@ -29,7 +29,7 @@ This project deploys a highly available, fault-tolerant, and auto-scaled web app
 | **Amazon EC2**            | Virtual servers configured with a web server (Apache/Nginx) and application code |
 | **Application Load Balancer (ALB)** | Distributes HTTP/HTTPS traffic and performs health checks                      |
 | **Auto Scaling Group**    | Maintains desired capacity with scaling policies based on CPU/memory usage       |
-| **Amazon RDS**            | Managed relational database with automated backups                               |
+| **Amazon Aurora (MySQL-compatible)** | High-performance, MySQL-compatible managed database with built-in Multi-AZ replication, automated backups, auto-failover |
 | **AWS IAM**               | Role-based permissions for secure resource access                                |
 | **Amazon CloudWatch**     | Collects metrics and triggers scaling events                                     |
 | **Amazon SNS**            | Notifies administrators of system events                                         |
@@ -66,8 +66,7 @@ Launch Template: Defines EC2 configuration (AMI, instance type, security groups)
 
 *Step 4: Database Layer*
 
-EC2 instances connect to Amazon RDS (Multi-AZ enabled for failover).
-Read Replicas added for read-heavy workloads.
+EC2 instances connect to Amazon Aurora (MySQL-compatible) with Multi-AZ enabled for high availability and automatic failover. Read Replicas are added across Availability Zones for read-heavy workloads.
 
 *Step 5: Monitoring & Alerts*
 
