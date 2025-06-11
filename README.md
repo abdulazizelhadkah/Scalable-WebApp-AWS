@@ -68,13 +68,15 @@ Launch Template: Defines EC2 configuration (AMI, instance type, security groups)
 
 EC2 instances connect to Amazon Aurora (MySQL-compatible) with Multi-AZ enabled for high availability and automatic failover. Read Replicas are added across Availability Zones for read-heavy workloads.
 
-*Step 5: Monitoring & Alerts*
+*Step 5: Monitoring*
 
 CloudWatch Alarms trigger:
 
 High CPU → Scale Out.
 
 Low Requests → Scale In.
+
+*Step 6: Alerting*
 
 SNS Notifications alert admins via email/SMS for critical events.
 
